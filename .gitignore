@@ -1,0 +1,79 @@
+# cAMP_switch - .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (large files should not be in git)
+*.pdb
+*.gro
+*.xtc
+*.trr
+*.edr
+*.tpr
+*.cpt
+*.ndx
+*.top
+*.itp
+
+# Exceptions - keep example/template files
+!data/*.pdb
+!**/inputs/*.pdb
+
+# MD simulation outputs
+*.log
+*.xvg
+\#*\#
+mdout.mdp
+
+# RFDiffusion outputs
+01_rfdiffusion/outputs/*.pdb
+01_rfdiffusion/outputs/*.pt
+
+# ProteinMPNN outputs
+02_proteinmpnn/outputs/seqs/
+02_proteinmpnn/outputs/scores/
+
+# GROMACS trajectories
+03_md_simulations/trajectories/*.xtc
+03_md_simulations/trajectories/*.trr
+03_md_simulations/trajectories/*.edr
+
+# Analysis results
+04_analysis/results/*.png
+04_analysis/results/*.pdf
+04_analysis/figures/*.png
+04_analysis/figures/*.pdf
+
+# Temporary files
+*.tmp
+*.bak
+tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep directory structure
+!**/.gitkeep

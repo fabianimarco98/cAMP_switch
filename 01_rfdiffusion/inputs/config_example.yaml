@@ -1,0 +1,37 @@
+# Example configuration for RFDiffusion
+# This is a template - modify according to your needs
+
+inference:
+  # Output configuration
+  output_prefix: "01_rfdiffusion/outputs/cAMP_binder"
+  num_designs: 100
+  
+  # Input structure (if using hotspot/template)
+  # input_pdb: "data/cAMP.pdb"
+  
+# Contig map defines the protein scaffold
+contigmap:
+  # Example: design a 100-residue protein
+  contigs: ["A1-100"]
+  
+  # For more complex architectures:
+  # contigs: ["A10-40/0 A10-40"]  # Two domains with flexible linker
+  
+# Protein-protein interface settings (for binding ligands)
+ppi:
+  # Define hotspot residues that should be near the ligand
+  hotspot_res: []
+  
+  # Example: force residues 30-32 to be near ligand
+  # hotspot_res: ["A30", "A31", "A32"]
+
+# Additional parameters
+# Uncomment and modify as needed:
+
+# diffuser:
+#   T: 50  # Number of diffusion steps
+#   partial_T: 10  # Partial diffusion steps
+
+# sampling:
+#   temperature: 1.0
+#   steps: 50
